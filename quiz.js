@@ -43,7 +43,7 @@ function startquiz(){
  
     
     
-   // ve dakika başlar 59 saniyeden geri setınterval konusunu calıs yaptıgın uygulamalara bak sonra buraya ekle
+ 
 }
 
 ext.addEventListener("click",() =>{
@@ -143,7 +143,7 @@ function showquestion(par){
 
 function resetstate(){
      foots.classList.add('hidem');
-    while(quescont.firstChild){ // ılk cocugu kadar sılıcek sonra bunu nextquestion fonksıyonunda ılk yere yazıcaz
+    while(quescont.firstChild){ 
         
      quescont.removeChild(quescont.firstChild);   
     }
@@ -158,7 +158,7 @@ function answer(e){
    
 
 let am =  shufflequestin[currentquestionindex];
- const boolvar =   am.answer.find(function(omp){ // sorunun true sıkkını verır
+ const boolvar =   am.answer.find(function(omp){ 
         
    return omp.correct;
  
@@ -171,7 +171,7 @@ let am =  shufflequestin[currentquestionindex];
 
 
 if(val1 == tıkval){
-       // tıkval.disabled=true;
+     
   
        puan.textContent = Number(puan.textContent) + 20; 
   
@@ -237,7 +237,7 @@ btnoutlinesecondary.addEventListener("click",function(){
 
 function localınsert(person){
     
-        // localStorage.setItem("isimlistesi",yenıgorev.value);
+        
         
       let memeoryarray;
         
@@ -267,23 +267,12 @@ function localınsert(person){
   
                 }
 
-          
-          
-          
-   
-        
-    
-    
-            
-       
         
           
     memeoryarray.sort((x,y) =>  y.score-x.score);
 
        
-               // local apiye yazdırmam lazım bunun ıcın strınge donusturup yazdırcaz
-    
-    
+            
             
                
         localStorage.setItem("kullancı",JSON.stringify(memeoryarray));  
@@ -313,11 +302,7 @@ function localoku(){
     
     memeoryarray.map((gorev) => gorevıtemol(gorev));
     
-        // her bırını okuyup ıcındekı fonsıyonu calıstırcak ıcındekı gorevıtemol fonksıyonuda asagıda lıste yapısını olusturuyr
-        
- 
-        // burdakı parametre aslında dızıdekı her bır eleman
-
+       
     
 }
 
@@ -338,7 +323,7 @@ function gorevıtemol(gorev){
              const yenıdıv = document.createElement("div");
     
     yenıdıv.classList.add("gorev-item");
- // lı olusturma
+ 
    const gorelı = document.createElement("li");
     gorelı.classList.add("gorev-tanim");
     gorelı.innerText = gorev.name + gorev.score;
